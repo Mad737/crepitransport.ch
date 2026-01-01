@@ -1,0 +1,1470 @@
+<!DOCTYPE html>
+<html class="light" lang="de">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Crépi Transport Services - Ihr persönlicher Logistik-Assistent für Privatpersonen und Unternehmen in der Schweiz. Unlimitiert, flexibel, zuverlässig.">
+    <title>Crépi Transport Services - Ihr persönlicher Logistik-Assistent</title>
+    
+    <!-- Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta name="format-detection" content="telephone=no">
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Instagram -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1152d4",
+                        "secondary": "#1e40af",
+                        "accent": "#0ea5e9",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.5s ease-in-out',
+                        'slide-up': 'slideUp 0.6s ease-out',
+                        'pulse-gentle': 'pulseGentle 2s ease-in-out infinite',
+                        'float': 'float 3s ease-in-out infinite',
+                        'instagram-pulse': 'instagramPulse 2s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                        pulseGentle: {
+                            '0%, 100%': { opacity: '1' },
+                            '50%': { opacity: '0.8' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        },
+                        instagramPulse: {
+                            '0%, 100%': { 
+                                transform: 'scale(1)',
+                                boxShadow: '0 0 0 0 rgba(225, 48, 108, 0.7)'
+                            },
+                            '50%': { 
+                                transform: 'scale(1.05)',
+                                boxShadow: '0 0 0 10px rgba(225, 48, 108, 0)'
+                            }
+                        }
+                    }
+                },
+            },
+        }
+    </script>
+    
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Active nav link */
+        .nav-link.active {
+            background-color: rgba(17, 82, 212, 0.1);
+            color: #1152d4 !important;
+            font-weight: 600;
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #1152d4;
+            border-radius: 5px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: #0d47a1;
+        }
+        
+        /* Hero text gradient */
+        .hero-gradient {
+            background: linear-gradient(135deg, #ffffff 0%, #a5b4fc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        /* Print styles */
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+        }
+        
+        /* Logo styling */
+        .logo-img {
+            filter: brightness(0) invert(1);
+            transition: all 0.3s ease;
+        }
+        
+        .dark .logo-img {
+            filter: brightness(0) invert(0);
+        }
+        
+        /* Star rating */
+        .star-rating {
+            color: #fbbf24;
+            font-size: 1.2rem;
+        }
+        
+        /* Accordion styles */
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        
+        .accordion-content.open {
+            max-height: 2000px;
+        }
+        
+        .accordion-icon {
+            transition: transform 0.3s ease;
+        }
+        
+        .accordion-icon.open {
+            transform: rotate(180deg);
+        }
+        
+        /* Form success message */
+        .form-success {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+        
+        .form-success.show {
+            display: block;
+            opacity: 1;
+        }
+        
+        /* Loading spinner */
+        .spinner {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #1152d4;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        /* Logo container animation */
+        .logo-container {
+            transition: all 0.3s ease;
+        }
+        
+        .logo-container:hover {
+            transform: translateY(-2px);
+        }
+        
+        /* Instagram gradient */
+        .instagram-gradient {
+            background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+        }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-gray-900 dark:text-gray-100 transition-colors duration-300">
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/41786625542" target="_blank" rel="noopener noreferrer"
+       class="fixed bottom-6 right-6 z-50 bg-green-500 text-white p-4 rounded-full shadow-xl hover:bg-green-600 transition-all duration-300 hover:scale-110 animate-float no-print"
+       aria-label="WhatsApp Chat öffnen">
+        <span class="material-symbols-outlined text-2xl">chat</span>
+    </a>
+
+    <!-- Floating Instagram Button -->
+    <a href="https://www.instagram.com/crepi_transport?igsh=MWQ0bmVra2g4a3ptNw%3D%3D&utm_source=qr" 
+       target="_blank" rel="noopener noreferrer"
+       class="fixed bottom-24 right-6 z-50 instagram-gradient text-white p-4 rounded-full shadow-xl hover:opacity-90 transition-all duration-300 hover:scale-110 animate-instagram-pulse no-print"
+       aria-label="Instagram öffnen">
+        <i class="fab fa-instagram text-2xl"></i>
+    </a>
+
+    <!-- Header/Navigation -->
+    <header class="sticky top-0 z-40 bg-white/95 dark:bg-background-dark/95 backdrop-blur-lg border-b border-gray-200 dark:border-gray-800 shadow-sm transition-all duration-300">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <div class="logo-container flex items-center gap-4">
+                    <div class="w-16 h-16 rounded-xl overflow-hidden flex items-center justify-center bg-white p-1 shadow-lg">
+                        <img src="https://i.ibb.co/8gMVZ05j/logo.png" 
+                             alt="Crépi Transport Logo"
+                             class="h-full w-full object-contain">
+                    </div>
+                    <div class="hidden sm:flex flex-col">
+                        <span class="text-xl font-black text-gray-900 dark:text-white leading-none tracking-tight">CRÉPI TRANSPORT</span>
+                        <span class="text-sm text-gray-500 dark:text-gray-400 mt-1">
+                            Unlimitierte Botengänge, Transporte und Besorgungen
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-2" aria-label="Hauptnavigation">
+                    <a href="#home" class="nav-link px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-primary">Home</a>
+                    <a href="#services-advantages-section" class="nav-link px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-primary">Dienstleistungen</a>
+                    <a href="#services-advantages-section" class="nav-link px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-primary">Vorteile</a>
+                    <a href="#pricing" class="nav-link px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-primary">Abo-Pakete</a>
+                    <a href="#testimonials" class="nav-link px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-primary">Bewertungen</a>
+                    <a href="#contact" class="nav-link px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-primary">Kontakt</a>
+                </nav>
+
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-button" class="md:hidden p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors" aria-label="Menü öffnen">
+                    <span class="material-symbols-outlined text-2xl">menu</span>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="md:hidden hidden py-6 border-t border-gray-200 dark:border-gray-800 animate-fade-in">
+                <div class="flex flex-col space-y-4">
+                    <a href="#home" class="nav-link px-4 py-3 rounded-xl transition-all duration-300 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-primary text-lg font-medium">Home</a>
+                    <a href="#services-advantages-section" class="nav-link px-4 py-3 rounded-xl transition-all duration-300 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-primary text-lg font-medium">Dienstleistungen</a>
+                    <a href="#services-advantages-section" class="nav-link px-4 py-3 rounded-xl transition-all duration-300 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-primary text-lg font-medium">Vorteile</a>
+                    <a href="#pricing" class="nav-link px-4 py-3 rounded-xl transition-all duration-300 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-primary text-lg font-medium">Abo-Pakete</a>
+                    <a href="#testimonials" class="nav-link px-4 py-3 rounded-xl transition-all duration-300 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-primary text-lg font-medium">Bewertungen</a>
+                    <a href="#contact" class="nav-link px-4 py-3 rounded-xl transition-all duration-300 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-primary text-lg font-medium">Kontakt</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Home/Hero Section -->
+        <section id="home" class="page-section relative min-h-screen flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40 z-10"></div>
+                <img class="h-full w-full object-cover animate-fade-in" 
+                     alt="Moderner Lieferwagen fährt auf einer sauberen Stadtstraße, vermittelt Professionalität und Effizienz." 
+                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsEAmHNIkmtGUVLX7A7NzrHdTRq4MBAmchctFnKMAgfO-WnvKHzRtR0Vrd4GjESGmtVm7pB_oU--IRINXLLuDHf5-BW242G_Md8L6BuPorBC99H8gMJhCkcXxCM-d0Bimxcufrcblyt6agwzaqbylSikxL112W-w7fkoea_UGyth-YNvc3OJoS-AnLCUWPQG2jGrB8Q1Z6rHL0BC6GOYOvC-3GXs7Sbr2sEel0DwjIeJ7utgy93IUhmNLSp5-mpWffjL0PHsg-dJo"
+                     loading="lazy">
+            </div>
+            
+            <div class="relative z-20 container mx-auto px-4 text-center text-white animate-slide-up">
+                <div class="max-w-5xl mx-auto">
+                    <!-- Main Hero Text -->
+                    <div class="mb-10">
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-black leading-tight mb-6 hero-gradient">
+                            Ihr persönlicher<br>Logistik-Assistent
+                        </h1>
+                        <p class="text-2xl md:text-3xl font-bold text-white mb-6">
+                            für Privatpersonen und Unternehmen
+                        </p>
+                        <p class="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto font-medium">
+                            unlimitiert • flexibel • zuverlässig
+                        </p>
+                    </div>
+                    
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-6 justify-center mb-12">
+                        <a href="#pricing" 
+                           class="bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-primary text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl shadow-lg transform hover:-translate-y-1">
+                            <span class="flex items-center justify-center gap-2 text-lg">
+                                <span class="material-symbols-outlined">shopping_cart</span>
+                                Abo-Pakete ansehen
+                            </span>
+                        </a>
+                        <a href="https://wa.me/41786625542" target="_blank" rel="noopener noreferrer"
+                           class="bg-white/10 hover:bg-white/20 border-2 border-white/30 text-white font-bold py-4 px-8 rounded-xl backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+                            <span class="flex items-center justify-center gap-2 text-lg">
+                                <span class="material-symbols-outlined">chat</span>
+                                Kostenlose Beratung
+                            </span>
+                        </a>
+                    </div>
+                    
+                    <!-- Contact Info -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto mt-16">
+                        <div class="flex items-center justify-center gap-4 p-6 bg-white/10 rounded-2xl backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all">
+                            <span class="material-symbols-outlined text-3xl text-green-400">call</span>
+                            <div class="text-left">
+                                <p class="text-sm text-gray-300">Telefon</p>
+                                <a href="tel:+41786625542" class="font-bold text-xl hover:underline hover:text-white">+41 78 662 55 42</a>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-center gap-4 p-6 bg-white/10 rounded-2xl backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all">
+                            <span class="material-symbols-outlined text-3xl text-blue-400">mail</span>
+                            <div class="text-left">
+                                <p class="text-sm text-gray-300">E-Mail</p>
+                                <a href="mailto:julien.crepin@gmx.ch" class="font-bold text-xl hover:underline hover:text-white">julien.crepin@gmx.ch</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Social Media -->
+                    <div class="mt-12">
+                        <p class="text-gray-300 mb-4">Folgen Sie uns</p>
+                        <div class="flex justify-center gap-4">
+                            <a href="https://www.instagram.com/crepi_transport?igsh=MWQ0bmVra2g4a3ptNw%3D%3D&utm_source=qr" 
+                               target="_blank" rel="noopener noreferrer"
+                               class="p-3 rounded-full instagram-gradient text-white hover:opacity-90 transition-all duration-300 hover:scale-110">
+                                <i class="fab fa-instagram text-2xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services & Advantages Accordion Section -->
+        <section id="services-advantages-section" class="page-section py-20 bg-white dark:bg-gray-900">
+            <div class="container mx-auto px-4">
+                <!-- Services Accordion -->
+                <div class="max-w-4xl mx-auto mb-12">
+                    <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl overflow-hidden">
+                        <button onclick="toggleAccordion('services-accordion', 'services-icon')" 
+                                class="w-full flex items-center justify-between p-8 text-left hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+                            <div class="flex items-center gap-4">
+                                <span class="text-primary text-3xl">
+                                    <span class="material-symbols-outlined">local_shipping</span>
+                                </span>
+                                <div>
+                                    <h2 class="text-2xl font-bold">Unsere Dienstleistungen</h2>
+                                    <p class="text-gray-600 dark:text-gray-400">Alles aus einer Hand – einfach, schnell und zuverlässig</p>
+                                </div>
+                            </div>
+                            <span id="services-icon" class="material-symbols-outlined text-2xl accordion-icon">expand_more</span>
+                        </button>
+                        
+                        <div id="services-accordion" class="accordion-content">
+                            <div class="p-8 pt-0">
+                                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                                    <!-- Dienstleistung 1 -->
+                                    <div class="bg-white dark:bg-gray-900 rounded-xl p-6 hover:shadow-lg transition-all duration-300">
+                                        <div class="text-primary text-3xl mb-4">
+                                            <span class="material-symbols-outlined">local_shipping</span>
+                                        </div>
+                                        <h3 class="text-lg font-bold mb-2">Kleinguttransporte</h3>
+                                        <p class="text-gray-600 dark:text-gray-400 text-sm">
+                                            Ersatzteile, Werkzeuge, Pakete
+                                        </p>
+                                    </div>
+                                    
+                                    <!-- Dienstleistung 2 -->
+                                    <div class="bg-white dark:bg-gray-900 rounded-xl p-6 hover:shadow-lg transition-all duration-300">
+                                        <div class="text-primary text-3xl mb-4">
+                                            <span class="material-symbols-outlined">package_2</span>
+                                        </div>
+                                        <h3 class="text-lg font-bold mb-2">Abhol & Lieferung</h3>
+                                        <p class="text-gray-600 dark:text-gray-400 text-sm">
+                                            Schnell und zuverlässig
+                                        </p>
+                                    </div>
+                                    
+                                    <!-- Dienstleistung 3 -->
+                                    <div class="bg-white dark:bg-gray-900 rounded-xl p-6 hover:shadow-lg transition-all duration-300">
+                                        <div class="text-primary text-3xl mb-4">
+                                            <span class="material-symbols-outlined">recycling</span>
+                                        </div>
+                                        <h3 class="text-lg font-bold mb-2">Entsorgung</h3>
+                                        <p class="text-gray-600 dark:text-gray-400 text-sm">
+                                            Fachgerecht und umweltbewusst
+                                        </p>
+                                    </div>
+                                    
+                                    <!-- Dienstleistung 4 -->
+                                    <div class="bg-white dark:bg-gray-900 rounded-xl p-6 hover:shadow-lg transition-all duration-300">
+                                        <div class="text-primary text-3xl mb-4">
+                                            <span class="material-symbols-outlined">electric_bolt</span>
+                                        </div>
+                                        <h3 class="text-lg font-bold mb-2">Express-Service</h3>
+                                        <p class="text-gray-600 dark:text-gray-400 text-sm">
+                                            Dringende Lieferungen
+                                        </p>
+                                    </div>
+                                    
+                                    <!-- Dienstleistung 5 -->
+                                    <div class="bg-white dark:bg-gray-900 rounded-xl p-6 hover:shadow-lg transition-all duration-300">
+                                        <div class="text-primary text-3xl mb-4">
+                                            <span class="material-symbols-outlined">shopping_cart</span>
+                                        </div>
+                                        <h3 class="text-lg font-bold mb-2">Einkäufe</h3>
+                                        <p class="text-gray-600 dark:text-gray-400 text-sm">
+                                            Bequem von zu Hause
+                                        </p>
+                                    </div>
+                                    
+                                    <!-- Dienstleistung 6 -->
+                                    <div class="bg-white dark:bg-gray-900 rounded-xl p-6 hover:shadow-lg transition-all duration-300">
+                                        <div class="text-primary text-3xl mb-4">
+                                            <span class="material-symbols-outlined">directions_walk</span>
+                                        </div>
+                                        <h3 class="text-lg font-bold mb-2">Botengänge</h3>
+                                        <p class="text-gray-600 dark:text-gray-400 text-sm">
+                                            Alle Alltagsaufgaben
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Advantages Accordion -->
+                <div class="max-w-4xl mx-auto mb-16">
+                    <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl overflow-hidden">
+                        <button onclick="toggleAccordion('advantages-accordion', 'advantages-icon')" 
+                                class="w-full flex items-center justify-between p-8 text-left hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+                            <div class="flex items-center gap-4">
+                                <span class="text-primary text-3xl">
+                                    <span class="material-symbols-outlined">star</span>
+                                </span>
+                                <div>
+                                    <h2 class="text-2xl font-bold">Ihre Vorteile</h2>
+                                    <p class="text-gray-600 dark:text-gray-400">Warum Crépi Transport die richtige Wahl ist</p>
+                                </div>
+                            </div>
+                            <span id="advantages-icon" class="material-symbols-outlined text-2xl accordion-icon">expand_more</span>
+                        </button>
+                        
+                        <div id="advantages-accordion" class="accordion-content">
+                            <div class="p-8 pt-0">
+                                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                                    <!-- Vorteil 1 -->
+                                    <div class="bg-white dark:bg-gray-900 rounded-xl p-6 hover:shadow-lg transition-all duration-300">
+                                        <div class="text-primary text-2xl mb-3">
+                                            <span class="material-symbols-outlined">all_inclusive</span>
+                                        </div>
+                                        <h3 class="font-bold mb-2">Unbegrenzte Aufträge</h3>
+                                        <p class="text-gray-600 dark:text-gray-400 text-sm">
+                                            Keine Limits – so oft Sie möchten
+                                        </p>
+                                    </div>
+                                    
+                                    <!-- Vorteil 2 -->
+                                    <div class="bg-white dark:bg-gray-900 rounded-xl p-6 hover:shadow-lg transition-all duration-300">
+                                        <div class="text-primary text-2xl mb-3">
+                                            <span class="material-symbols-outlined">schedule</span>
+                                        </div>
+                                        <h3 class="font-bold mb-2">Mehr Zeit</h3>
+                                        <p class="text-gray-600 dark:text-gray-400 text-sm">
+                                            Sparen Sie Zeit für Wichtiges
+                                        </p>
+                                    </div>
+                                    
+                                    <!-- Vorteil 3 -->
+                                    <div class="bg-white dark:bg-gray-900 rounded-xl p-6 hover:shadow-lg transition-all duration-300">
+                                        <div class="text-primary text-2xl mb-3">
+                                            <span class="material-symbols-outlined">payments</span>
+                                        </div>
+                                        <h3 class="font-bold mb-2">Flexibler Cashback</h3>
+                                        <p class="text-gray-600 dark:text-gray-400 text-sm">
+                                            Attraktive Rückvergütung
+                                        </p>
+                                    </div>
+                                    
+                                    <!-- Vorteil 4 -->
+                                    <div class="bg-white dark:bg-gray-900 rounded-xl p-6 hover:shadow-lg transition-all duration-300">
+                                        <div class="text-primary text-2xl mb-3">
+                                            <span class="material-symbols-outlined">trending_up</span>
+                                        </div>
+                                        <h3 class="font-bold mb-2">Wachstum</h3>
+                                        <p class="text-gray-600 dark:text-gray-400 text-sm">
+                                            Mehr Umsatzpotenzial
+                                        </p>
+                                    </div>
+                                    
+                                    <!-- Vorteil 5 -->
+                                    <div class="bg-white dark:bg-gray-900 rounded-xl p-6 hover:shadow-lg transition-all duration-300">
+                                        <div class="text-primary text-2xl mb-3">
+                                            <span class="material-symbols-outlined">support_agent</span>
+                                        </div>
+                                        <h3 class="font-bold mb-2">Persönlicher Service</h3>
+                                        <p class="text-gray-600 dark:text-gray-400 text-sm">
+                                            Ihr Ansprechpartner
+                                        </p>
+                                    </div>
+                                    
+                                    <!-- Vorteil 6 -->
+                                    <div class="bg-white dark:bg-gray-900 rounded-xl p-6 hover:shadow-lg transition-all duration-300">
+                                        <div class="text-primary text-2xl mb-3">
+                                            <span class="material-symbols-outlined">shield</span>
+                                        </div>
+                                        <h3 class="font-bold mb-2">Zuverlässigkeit</h3>
+                                        <p class="text-gray-600 dark:text-gray-400 text-sm">
+                                            100% Termintreue
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing/Abo Section -->
+        <section id="pricing" class="page-section py-20 bg-gray-50 dark:bg-gray-900">
+            <div class="container mx-auto px-4">
+                <div class="max-w-6xl mx-auto text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-black mb-4">Wählen Sie Ihr Abo-Paket</h2>
+                    <p class="text-gray-600 dark:text-gray-400">
+                        Alle Pakete inklusive unbegrenzter Aufträge und Cashback
+                    </p>
+                </div>
+                
+                <!-- Mobile View: Carousel for 3 packages -->
+                <div class="lg:hidden">
+                    <div class="relative overflow-hidden">
+                        <div id="pricing-carousel" class="flex transition-transform duration-300">
+                            <!-- Package 1 -->
+                            <div class="w-full flex-shrink-0 px-4">
+                                <div class="bg-white dark:bg-background-dark rounded-2xl border-2 border-gray-200 dark:border-gray-800 p-8 shadow-lg">
+                                    <div class="mb-6">
+                                        <span class="bg-gray-600 text-white px-4 py-1 rounded-full text-sm font-bold">
+                                            Basic
+                                        </span>
+                                    </div>
+                                    <h3 class="text-2xl font-bold mb-4">Small Pack</h3>
+                                    <div class="mb-8">
+                                        <span class="text-5xl font-black">375</span>
+                                        <span class="text-gray-600 dark:text-gray-400 text-xl">CHF/Monat</span>
+                                    </div>
+                                    <ul class="space-y-3 mb-10">
+                                        <li class="flex items-center gap-2">
+                                            <span class="material-symbols-outlined text-green-500">check</span>
+                                            <span class="text-sm">50 km Reichweite</span>
+                                        </li>
+                                        <li class="flex items-center gap-2">
+                                            <span class="material-symbols-outlined text-green-500">check</span>
+                                            <span class="text-sm">Unlimitierter Transport</span>
+                                        </li>
+                                        <li class="flex items-center gap-2">
+                                            <span class="material-symbols-outlined text-green-500">check</span>
+                                            <span class="text-sm">600 CHF Cashback</span>
+                                        </li>
+                                    </ul>
+                                    <button onclick="contactForAbo('Small Pack')" 
+                                            class="w-full bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-800 dark:text-gray-200 font-bold py-4 rounded-xl transition-all">
+                                        Jetzt anfragen
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <!-- Package 2 -->
+                            <div class="w-full flex-shrink-0 px-4">
+                                <div class="bg-gradient-to-br from-white to-blue-50 dark:from-background-dark dark:to-blue-900/20 rounded-2xl border-2 border-primary p-8 shadow-2xl shadow-primary/20">
+                                    <div class="mb-6">
+                                        <span class="bg-primary text-white px-4 py-1 rounded-full text-sm font-bold">
+                                            Beliebt
+                                        </span>
+                                    </div>
+                                    <h3 class="text-2xl font-bold mb-4">Medium Pack</h3>
+                                    <div class="mb-8">
+                                        <span class="text-5xl font-black">875</span>
+                                        <span class="text-gray-600 dark:text-gray-400 text-xl">CHF/Monat</span>
+                                    </div>
+                                    <ul class="space-y-3 mb-10">
+                                        <li class="flex items-center gap-2">
+                                            <span class="material-symbols-outlined text-green-500">check</span>
+                                            <span class="text-sm">100 km Reichweite</span>
+                                        </li>
+                                        <li class="flex items-center gap-2">
+                                            <span class="material-symbols-outlined text-green-500">check</span>
+                                            <span class="text-sm">Unlimitierter Transport</span>
+                                        </li>
+                                        <li class="flex items-center gap-2">
+                                            <span class="material-symbols-outlined text-green-500">check</span>
+                                            <span class="text-sm">900 CHF Cashback</span>
+                                        </li>
+                                    </ul>
+                                    <button onclick="contactForAbo('Medium Pack')" 
+                                            class="w-full bg-primary hover:bg-secondary text-white font-bold py-4 rounded-xl transition-all">
+                                        Jetzt anfragen
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <!-- Package 3 -->
+                            <div class="w-full flex-shrink-0 px-4">
+                                <div class="bg-white dark:bg-background-dark rounded-2xl border-2 border-gray-200 dark:border-gray-800 p-8 shadow-lg">
+                                    <div class="mb-6">
+                                        <span class="bg-purple-600 text-white px-4 py-1 rounded-full text-sm font-bold">
+                                            Premium
+                                        </span>
+                                    </div>
+                                    <h3 class="text-2xl font-bold mb-4">Large Pack</h3>
+                                    <div class="mb-8">
+                                        <span class="text-5xl font-black">1575</span>
+                                        <span class="text-gray-600 dark:text-gray-400 text-xl">CHF/Monat</span>
+                                    </div>
+                                    <ul class="space-y-3 mb-10">
+                                        <li class="flex items-center gap-2">
+                                            <span class="material-symbols-outlined text-green-500">check</span>
+                                            <span class="text-sm">Unbegrenzte Reichweite</span>
+                                        </li>
+                                        <li class="flex items-center gap-2">
+                                            <span class="material-symbols-outlined text-green-500">check</span>
+                                            <span class="text-sm">Unlimitierter Transport</span>
+                                        </li>
+                                        <li class="flex items-center gap-2">
+                                            <span class="material-symbols-outlined text-green-500">check</span>
+                                            <span class="text-sm">1080 CHF Cashback</span>
+                                        </li>
+                                    </ul>
+                                    <button onclick="contactForAbo('Large Pack')" 
+                                            class="w-full bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-800 dark:text-gray-200 font-bold py-4 rounded-xl transition-all">
+                                        Jetzt anfragen
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Carousel Navigation -->
+                        <div class="flex justify-center mt-8 gap-2">
+                            <button onclick="prevPackage()" class="p-2 rounded-full bg-gray-200 dark:bg-gray-800">
+                                <span class="material-symbols-outlined">chevron_left</span>
+                            </button>
+                            <div class="flex items-center gap-2">
+                                <span id="package-1" class="w-3 h-3 rounded-full bg-primary"></span>
+                                <span id="package-2" class="w-3 h-3 rounded-full bg-gray-300 dark:bg-gray-700"></span>
+                                <span id="package-3" class="w-3 h-3 rounded-full bg-gray-300 dark:bg-gray-700"></span>
+                            </div>
+                            <button onclick="nextPackage()" class="p-2 rounded-full bg-gray-200 dark:bg-gray-800">
+                                <span class="material-symbols-outlined">chevron_right</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Desktop View: 3 packages side by side -->
+                <div class="hidden lg:grid grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <!-- Small Pack -->
+                    <div class="bg-white dark:bg-background-dark rounded-2xl border-2 border-gray-200 dark:border-gray-800 p-8 hover:shadow-2xl transition-all duration-300 relative">
+                        <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                            <span class="bg-gray-600 text-white px-4 py-1 rounded-full text-sm font-bold">
+                                Basic
+                            </span>
+                        </div>
+                        
+                        <h3 class="text-2xl font-bold mb-6">Small Pack</h3>
+                        <div class="mb-8">
+                            <span class="text-5xl font-black">375</span>
+                            <span class="text-gray-600 dark:text-gray-400 text-xl">CHF/Monat</span>
+                        </div>
+                        
+                        <ul class="space-y-4 mb-10">
+                            <li class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-green-500">check_circle</span>
+                                <span class="text-sm">50 km Reichweite</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-green-500">check_circle</span>
+                                <span class="text-sm">Unlimitierter Transport</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-green-500">check_circle</span>
+                                <span class="text-sm">Sonderaufträge: 50 CHF Aufpreis</span>
+                            </li>
+                            <li class="flex items-center gap-3 font-bold text-primary">
+                                <span class="material-symbols-outlined">payments</span>
+                                <span class="text-sm">600 CHF Cashback garantiert</span>
+                            </li>
+                        </ul>
+                        
+                        <button onclick="contactForAbo('Small Pack')" 
+                                class="w-full bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-800 dark:text-gray-200 font-bold py-4 rounded-xl transition-all duration-300 hover:scale-[1.02]">
+                            Jetzt anfragen
+                        </button>
+                    </div>
+                    
+                    <!-- Medium Pack (Highlighted) -->
+                    <div class="relative bg-gradient-to-br from-white to-blue-50 dark:from-background-dark dark:to-blue-900/20 rounded-2xl border-2 border-primary p-8 shadow-2xl shadow-primary/20 hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-2">
+                        <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                            <span class="bg-primary text-white px-4 py-1 rounded-full text-sm font-bold shadow-lg">
+                                Beliebteste Wahl
+                            </span>
+                        </div>
+                        
+                        <h3 class="text-2xl font-bold mb-6">Medium Pack</h3>
+                        <div class="mb-8">
+                            <span class="text-5xl font-black">875</span>
+                            <span class="text-gray-600 dark:text-gray-400 text-xl">CHF/Monat</span>
+                        </div>
+                        
+                        <ul class="space-y-4 mb-10">
+                            <li class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-green-500">check_circle</span>
+                                <span class="text-sm">100 km Reichweite</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-green-500">check_circle</span>
+                                <span class="text-sm">Unlimitierter Transport</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-green-500">check_circle</span>
+                                <span class="text-sm">Sonderaufträge: 50 CHF Aufpreis</span>
+                            </li>
+                            <li class="flex items-center gap-3 font-bold text-primary">
+                                <span class="material-symbols-outlined">payments</span>
+                                <span class="text-sm">900 CHF Cashback garantiert</span>
+                            </li>
+                        </ul>
+                        
+                        <button onclick="contactForAbo('Medium Pack')" 
+                                class="w-full bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-primary text-white font-bold py-4 rounded-xl transition-all duration-300 hover:scale-[1.02] shadow-lg">
+                            Jetzt anfragen
+                        </button>
+                    </div>
+                    
+                    <!-- Large Pack -->
+                    <div class="bg-white dark:bg-background-dark rounded-2xl border-2 border-gray-200 dark:border-gray-800 p-8 hover:shadow-2xl transition-all duration-300 relative">
+                        <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                            <span class="bg-purple-600 text-white px-4 py-1 rounded-full text-sm font-bold">
+                                Premium
+                            </span>
+                        </div>
+                        
+                        <h3 class="text-2xl font-bold mb-6">Large Pack</h3>
+                        <div class="mb-8">
+                            <span class="text-5xl font-black">1575</span>
+                            <span class="text-gray-600 dark:text-gray-400 text-xl">CHF/Monat</span>
+                        </div>
+                        
+                        <ul class="space-y-4 mb-10">
+                            <li class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-green-500">check_circle</span>
+                                <span class="text-sm">Unlimitierte Reichweite</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-green-500">check_circle</span>
+                                <span class="text-sm">Unlimitierter Transport</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-green-500">check_circle</span>
+                                <span class="text-sm">Keine Aufpreise</span>
+                            </li>
+                            <li class="flex items-center gap-3 font-bold text-primary">
+                                <span class="material-symbols-outlined">payments</span>
+                                <span class="text-sm">1080 CHF Cashback garantiert</span>
+                            </li>
+                        </ul>
+                        
+                        <button onclick="contactForAbo('Large Pack')" 
+                                class="w-full bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-800 dark:text-gray-200 font-bold py-4 rounded-xl transition-all duration-300 hover:scale-[1.02]">
+                            Jetzt anfragen
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Privatpersonen-Abo -->
+                <div class="mt-16 max-w-4xl mx-auto">
+                    <div class="bg-gradient-to-r from-purple-500/10 to-pink-500/10 dark:from-purple-900/20 dark:to-pink-900/20 rounded-2xl p-8 border border-purple-200 dark:border-purple-800">
+                        <div class="text-center mb-6">
+                            <h3 class="text-2xl font-bold mb-2">Privatpersonen-Abo</h3>
+                            <p class="text-gray-600 dark:text-gray-400">Ihr persönlicher Logistiker für den Alltag</p>
+                        </div>
+                        <div class="grid md:grid-cols-3 gap-8">
+                            <div class="md:col-span-2">
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+                                    <div class="flex items-center gap-3">
+                                        <span class="material-symbols-outlined text-purple-500">check_circle</span>
+                                        <span class="text-sm">Einkäufe & Paketabholungen</span>
+                                    </div>
+                                    <div class="flex items-center gap-3">
+                                        <span class="material-symbols-outlined text-purple-500">check_circle</span>
+                                        <span class="text-sm">Entsorgungsfahrten</span>
+                                    </div>
+                                    <div class="flex items-center gap-3">
+                                        <span class="material-symbols-outlined text-purple-500">check_circle</span>
+                                        <span class="text-sm">Spontane Erledigungen</span>
+                                    </div>
+                                    <div class="flex items-center gap-3">
+                                        <span class="material-symbols-outlined text-purple-500">check_circle</span>
+                                        <span class="text-sm">Kleinere Transporte</span>
+                                    </div>
+                                </div>
+                                <p class="text-gray-700 dark:text-gray-300 mb-6">
+                                    <strong>Unbegrenzte Aufträge</strong> innerhalb von 50 km ab Ihrem Wohnort. Mehr Zeit für das, was wirklich zählt.
+                                </p>
+                                <button onclick="contactForAbo('Privatpersonen-Abo')" 
+                                        class="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold py-3 px-6 rounded-xl transition-all">
+                                    Privat-Abo anfragen
+                                </button>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-4xl font-black text-purple-600 mb-2">175 CHF</div>
+                                <div class="text-gray-600 dark:text-gray-400">pro Monat</div>
+                                <div class="mt-4 text-sm text-gray-500 dark:text-gray-400">
+                                    Keine versteckten Kosten<br>
+                                    Flexibel kündbar
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="page-section py-20 bg-white dark:bg-gray-900">
+            <div class="container mx-auto px-4">
+                <div class="max-w-6xl mx-auto text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-black mb-4">Was unsere Kunden sagen</h2>
+                    <p class="text-gray-600 dark:text-gray-400">
+                        Über 500 zufriedene Kunden vertrauen auf unseren Service
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Testimonial 1 -->
+                    <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 hover:shadow-lg transition-all duration-300">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mr-4">
+                                <span class="text-primary font-bold">MH</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Markus Huber</h4>
+                                <p class="text-sm text-gray-500 dark:text-gray-400">Unternehmer</p>
+                            </div>
+                        </div>
+                        <div class="star-rating mb-4">
+                            ★★★★★
+                        </div>
+                        <p class="text-gray-700 dark:text-gray-300 italic">
+                            "Seit wir das Medium Pack nutzen, haben wir 30% Zeitersparnis in der Logistik. Der Cashback ist ein fantastisches Bonusprogramm!"
+                        </p>
+                    </div>
+                    
+                    <!-- Testimonial 2 -->
+                    <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 hover:shadow-lg transition-all duration-300">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center mr-4">
+                                <span class="text-green-600 font-bold">SM</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Sarah Müller</h4>
+                                <p class="text-sm text-gray-500 dark:text-gray-400">Privatkunde</p>
+                            </div>
+                        </div>
+                        <div class="star-rating mb-4">
+                            ★★★★★
+                        </div>
+                        <p class="text-gray-700 dark:text-gray-300 italic">
+                            "Das Privat-Abo hat meinen Alltag revolutioniert. Einkäufe, Pakete, Entsorgung – alles wird erledigt. Absolute Empfehlung!"
+                        </p>
+                    </div>
+                    
+                    <!-- Testimonial 3 -->
+                    <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 hover:shadow-lg transition-all duration-300">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 bg-blue-500/20 rounded-full flex items-center justify-center mr-4">
+                                <span class="text-blue-600 font-bold">TW</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Thomas Weber</h4>
+                                <p class="text-sm text-gray-500 dark:text-gray-400">Geschäftsführer</p>
+                            </div>
+                        </div>
+                        <div class="star-rating mb-4">
+                            ★★★★★
+                        </div>
+                        <p class="text-gray-700 dark:text-gray-300 italic">
+                            "Die Flexibilität und Zuverlässigkeit ist herausragend. Auch spontane Aufträge werden sofort übernommen. Perfekter Service!"
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Stats -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 max-w-4xl mx-auto">
+                    <div class="text-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl">
+                        <div class="text-3xl font-bold text-primary mb-2">98%</div>
+                        <div class="text-gray-600 dark:text-gray-400">Zufriedenheit</div>
+                    </div>
+                    <div class="text-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl">
+                        <div class="text-3xl font-bold text-primary mb-2">500+</div>
+                        <div class="text-gray-600 dark:text-gray-400">Kunden</div>
+                    </div>
+                    <div class="text-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl">
+                        <div class="text-3xl font-bold text-primary mb-2">24/7</div>
+                        <div class="text-gray-600 dark:text-gray-400">Erreichbar</div>
+                    </div>
+                    <div class="text-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl">
+                        <div class="text-3xl font-bold text-primary mb-2">99%</div>
+                        <div class="text-gray-600 dark:text-gray-400">Pünktlichkeit</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="page-section py-20 bg-gray-50 dark:bg-gray-900">
+            <div class="container mx-auto px-4">
+                <div class="max-w-6xl mx-auto">
+                    <div class="text-center mb-16">
+                        <h2 class="text-3xl md:text-4xl font-black mb-4">Kontaktieren Sie uns</h2>
+                        <p class="text-gray-600 dark:text-gray-400">
+                            Unverbindliche Beratung - Wir finden die perfekte Lösung für Sie
+                        </p>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                        <!-- Contact Form -->
+                        <div class="lg:col-span-2 bg-white dark:bg-background-dark rounded-2xl p-10 border border-gray-200 dark:border-gray-800 shadow-lg">
+                            <h3 class="text-2xl font-bold mb-8">Kostenlose Beratung anfordern</h3>
+                            
+                            <!-- Success Message (hidden by default) -->
+                            <div id="form-success" class="form-success mb-8 p-6 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl">
+                                <div class="flex items-start gap-4">
+                                    <span class="material-symbols-outlined text-green-500 text-3xl">check_circle</span>
+                                    <div>
+                                        <h4 class="font-bold text-green-800 dark:text-green-300 text-lg mb-2">Vielen Dank für Ihre Anfrage!</h4>
+                                        <p class="text-green-700 dark:text-green-400">
+                                            Ihre Nachricht wurde erfolgreich gesendet. Wir melden uns innerhalb von 24 Stunden bei Ihnen.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Loading Indicator (hidden by default) -->
+                            <div id="form-loading" class="hidden mb-8 p-6 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl">
+                                <div class="flex items-center gap-4">
+                                    <div class="spinner"></div>
+                                    <div>
+                                        <h4 class="font-bold text-blue-800 dark:text-blue-300 text-lg mb-1">Ihre Anfrage wird gesendet...</h4>
+                                        <p class="text-blue-700 dark:text-blue-400 text-sm">
+                                            Bitte warten Sie einen Moment.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Error Message (hidden by default) -->
+                            <div id="form-error" class="hidden mb-8 p-6 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl">
+                                <div class="flex items-start gap-4">
+                                    <span class="material-symbols-outlined text-red-500 text-3xl">error</span>
+                                    <div>
+                                        <h4 class="font-bold text-red-800 dark:text-red-300 text-lg mb-2">Leider ist ein Fehler aufgetreten</h4>
+                                        <p class="text-red-700 dark:text-red-400">
+                                            Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt unter 
+                                            <a href="tel:+41786625542" class="underline">+41 78 662 55 42</a>.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Main Form -->
+                            <form id="contact-form" class="space-y-6" action="https://formspree.io/f/xlgegnjo" method="POST">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div>
+                                        <label class="block mb-2 font-medium">Name *</label>
+                                        <input type="text" name="name" required
+                                               class="w-full p-4 border border-gray-300 dark:border-gray-700 rounded-xl bg-transparent focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                                               placeholder="Ihr Name">
+                                    </div>
+                                    
+                                    <div>
+                                        <label class="block mb-2 font-medium">Telefon *</label>
+                                        <input type="tel" name="phone" required
+                                               class="w-full p-4 border border-gray-300 dark:border-gray-700 rounded-xl bg-transparent focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                                               placeholder="+41 78 123 45 67">
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <label class="block mb-2 font-medium">E-Mail *</label>
+                                    <input type="email" name="email" required
+                                           class="w-full p-4 border border-gray-300 dark:border-gray-700 rounded-xl bg-transparent focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                                           placeholder="ihre.email@beispiel.ch">
+                                </div>
+                                
+                                <div>
+                                    <label class="block mb-2 font-medium">Interessantes Abo</label>
+                                    <select name="abo-type" class="w-full p-4 border border-gray-300 dark:border-gray-700 rounded-xl bg-transparent focus:ring-2 focus:ring-primary focus:border-transparent transition-all">
+                                        <option value="">Bitte auswählen...</option>
+                                        <option value="Small Pack">Small Pack (375 CHF/Monat)</option>
+                                        <option value="Medium Pack">Medium Pack (875 CHF/Monat)</option>
+                                        <option value="Large Pack">Large Pack (1575 CHF/Monat)</option>
+                                        <option value="Privatpersonen-Abo">Privatpersonen-Abo (175 CHF/Monat)</option>
+                                        <option value="Noch unentschieden">Noch unentschieden / Beratung erwünscht</option>
+                                    </select>
+                                </div>
+                                
+                                <div>
+                                    <label class="block mb-2 font-medium">Nachricht</label>
+                                    <textarea name="message" rows="4"
+                                              class="w-full p-4 border border-gray-300 dark:border-gray-700 rounded-xl bg-transparent focus:ring-2 focus:ring-primary focus:border-transparent transition-all resize-none"
+                                              placeholder="Ihr Anliegen..."></textarea>
+                                </div>
+                                
+                                <!-- Hidden field for Formspree redirect -->
+                                <input type="hidden" name="_next" value="#contact">
+                                <input type="hidden" name="_subject" value="Neue Kontaktanfrage von Crépi Transport Website">
+                                <input type="hidden" name="_language" value="de">
+                                
+                                <button type="submit" id="submit-button"
+                                        class="w-full bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-primary text-white font-bold py-4 px-10 rounded-xl transition-all duration-300 hover:scale-[1.02] shadow-lg">
+                                    <span class="flex items-center justify-center gap-2">
+                                        <span class="material-symbols-outlined">send</span>
+                                        Anfrage senden
+                                    </span>
+                                </button>
+                            </form>
+                        </div>
+                        
+                        <!-- Contact Info -->
+                        <div class="space-y-8">
+                            <div class="bg-white dark:bg-background-dark rounded-2xl p-8 border border-gray-200 dark:border-gray-800 shadow-lg">
+                                <h3 class="text-2xl font-bold mb-6">Direkter Kontakt</h3>
+                                
+                                <div class="space-y-6">
+                                    <a href="https://wa.me/41786625542" target="_blank" rel="noopener noreferrer"
+                                       class="flex items-center gap-4 p-5 rounded-xl bg-green-500 text-white hover:bg-green-600 transition-all">
+                                        <span class="material-symbols-outlined text-3xl">chat</span>
+                                        <div>
+                                            <p class="font-bold">WhatsApp Chat</p>
+                                            <p class="text-sm opacity-90">Sofortige Antwort</p>
+                                        </div>
+                                    </a>
+                                    
+                                    <a href="mailto:julien.crepin@gmx.ch"
+                                       class="flex items-center gap-4 p-5 rounded-xl bg-blue-50 dark:bg-blue-900/30 text-primary dark:text-blue-300 hover:bg-blue-100 dark:hover:bg-blue-900/50 transition-all">
+                                        <span class="material-symbols-outlined text-3xl">mail</span>
+                                        <div>
+                                            <p class="font-bold">E-Mail</p>
+                                            <p class="text-sm">julien.crepin@gmx.ch</p>
+                                        </div>
+                                    </a>
+                                    
+                                    <a href="tel:+41786625542"
+                                       class="flex items-center gap-4 p-5 rounded-xl bg-blue-50 dark:bg-blue-900/30 text-primary dark:text-blue-300 hover:bg-blue-100 dark:hover:bg-blue-900/50 transition-all">
+                                        <span class="material-symbols-outlined text-3xl">call</span>
+                                        <div>
+                                            <p class="font-bold">Telefon</p>
+                                            <p class="text-sm">+41 78 662 55 42</p>
+                                        </div>
+                                    </a>
+                                    
+                                    <!-- Instagram Contact -->
+                                    <a href="https://www.instagram.com/crepi_transport?igsh=MWQ0bmVra2g4a3ptNw%3D%3D&utm_source=qr" 
+                                       target="_blank" rel="noopener noreferrer"
+                                       class="flex items-center gap-4 p-5 rounded-xl instagram-gradient text-white hover:opacity-90 transition-all">
+                                        <i class="fab fa-instagram text-3xl"></i>
+                                        <div>
+                                            <p class="font-bold">Instagram</p>
+                                            <p class="text-sm opacity-90">Folgen Sie uns</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <!-- Company Info -->
+                <div class="md:col-span-2">
+                    <div class="mb-6">
+                        <span class="text-xl font-black text-white leading-none tracking-tight">CRÉPI TRANSPORT</span>
+                        <p class="text-gray-400 mt-2">
+                            Ihr persönlicher Logistik-Assistent für Privatpersonen und Unternehmen. Unlimitierte Botengänge, Transporte und Besorgungen - noch am gleichen Tag erledigt.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-xl font-bold mb-6">Navigation</h4>
+                    <ul class="space-y-4">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#services-advantages-section" class="text-gray-400 hover:text-white transition-colors">Dienstleistungen</a></li>
+                        <li><a href="#pricing" class="text-gray-400 hover:text-white transition-colors">Abo-Pakete</a></li>
+                        <li><a href="#testimonials" class="text-gray-400 hover:text-white transition-colors">Bewertungen</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Kontakt</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-xl font-bold mb-6">Kontakt & Social</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary">call</span>
+                            <a href="tel:+41786625542" class="text-gray-400 hover:text-white transition-colors">+41 78 662 55 42</a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary">mail</span>
+                            <a href="mailto:julien.crepin@gmx.ch" class="text-gray-400 hover:text-white transition-colors">julien.crepin@gmx.ch</a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary">location_on</span>
+                            <span class="text-gray-400">Schweizweit verfügbar</span>
+                        </li>
+                        <li class="flex items-center gap-3 mt-6">
+                            <div class="flex gap-4">
+                                <a href="https://www.instagram.com/crepi_transport?igsh=MWQ0bmVra2g4a3ptNw%3D%3D&utm_source=qr" 
+                                   target="_blank" rel="noopener noreferrer"
+                                   class="p-2 rounded-full instagram-gradient text-white hover:opacity-90 transition-all">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="https://wa.me/41786625542" target="_blank" rel="noopener noreferrer"
+                                   class="p-2 rounded-full bg-green-500 text-white hover:bg-green-600 transition-all">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Bottom Footer -->
+            <div class="pt-8 border-t border-gray-800">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                    <div class="text-center md:text-left">
+                        <p class="text-gray-400">
+                            &copy; <span id="currentYear">2025</span> Crépi Transport Services. Alle Rechte vorbehalten.
+                        </p>
+                    </div>
+                    
+                    <div class="flex flex-wrap justify-center gap-6">
+                        <a href="impressum.html" class="text-gray-400 hover:text-white transition-colors text-sm">Impressum</a>
+                        <a href="datenschutz.html" class="text-gray-400 hover:text-white transition-colors text-sm">Datenschutz</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal for Abo Contact -->
+    <div id="aboModal" class="fixed inset-0 bg-black/50 z-50 hidden items-center justify-center p-4">
+        <div class="bg-white dark:bg-background-dark rounded-2xl p-8 max-w-md w-full animate-fade-in">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-2xl font-bold">Abo-Anfrage</h3>
+                <button onclick="closeModal()" class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">
+                    <span class="material-symbols-outlined">close</span>
+                </button>
+            </div>
+            <p class="text-gray-600 dark:text-gray-400 mb-6">
+                Sie möchten das <span id="selectedAbo" class="font-bold text-primary">Medium Pack</span> anfragen?
+            </p>
+            <p class="text-gray-600 dark:text-gray-400 mb-6">
+                Kontaktieren Sie uns direkt:
+            </p>
+            <div class="space-y-4">
+                <a href="tel:+41786625542" 
+                   class="flex items-center gap-3 p-4 bg-blue-50 dark:bg-blue-900/30 rounded-xl text-primary dark:text-blue-300 hover:bg-blue-100 dark:hover:bg-blue-900/50 transition-colors">
+                    <span class="material-symbols-outlined">call</span>
+                    <span class="font-bold">+41 78 662 55 42 anrufen</span>
+                </a>
+                <a href="https://wa.me/41786625542" target="_blank" rel="noopener noreferrer"
+                   class="flex items-center gap-3 p-4 bg-green-50 dark:bg-green-900/30 rounded-xl text-green-600 dark:text-green-400 hover:bg-green-100 dark:hover:bg-green-900/50 transition-colors">
+                    <span class="material-symbols-outlined">chat</span>
+                    <span class="font-bold">WhatsApp Nachricht senden</span>
+                </a>
+                <a href="https://www.instagram.com/crepi_transport?igsh=MWQ0bmVra2g4a3ptNw%3D%3D&utm_source=qr" 
+                   target="_blank" rel="noopener noreferrer"
+                   class="flex items-center gap-3 p-4 instagram-gradient text-white hover:opacity-90 transition-colors rounded-xl">
+                    <i class="fab fa-instagram"></i>
+                    <span class="font-bold">Instagram Nachricht senden</span>
+                </a>
+            </div>
+            <button onclick="closeModal()" 
+                    class="w-full mt-6 p-3 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-xl transition-colors">
+                Schließen
+            </button>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Update active nav link on scroll
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if(scrollY >= (sectionTop - 100)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if(link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Accordion functionality
+        function toggleAccordion(contentId, iconId) {
+            const content = document.getElementById(contentId);
+            const icon = document.getElementById(iconId);
+            
+            content.classList.toggle('open');
+            icon.classList.toggle('open');
+            
+            // Smooth scroll to accordion when opening
+            if (content.classList.contains('open')) {
+                setTimeout(() => {
+                    const section = document.getElementById('services-advantages-section');
+                    if (section) {
+                        const yOffset = -80;
+                        const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                        window.scrollTo({top: y, behavior: 'smooth'});
+                    }
+                }, 10);
+            }
+        }
+
+        // Pricing Carousel for Mobile
+        let currentPackage = 0;
+        const packages = document.querySelectorAll('#pricing-carousel > div');
+        const indicators = ['package-1', 'package-2', 'package-3'];
+
+        function updateCarousel() {
+            const carousel = document.getElementById('pricing-carousel');
+            const width = carousel.offsetWidth;
+            carousel.style.transform = `translateX(-${currentPackage * 100}%)`;
+            
+            // Update indicators
+            indicators.forEach((id, index) => {
+                const indicator = document.getElementById(id);
+                if (index === currentPackage) {
+                    indicator.classList.remove('bg-gray-300', 'dark:bg-gray-700');
+                    indicator.classList.add('bg-primary');
+                } else {
+                    indicator.classList.remove('bg-primary');
+                    indicator.classList.add('bg-gray-300', 'dark:bg-gray-700');
+                }
+            });
+        }
+
+        function nextPackage() {
+            currentPackage = (currentPackage + 1) % packages.length;
+            updateCarousel();
+        }
+
+        function prevPackage() {
+            currentPackage = (currentPackage - 1 + packages.length) % packages.length;
+            updateCarousel();
+        }
+
+        // Initialize carousel
+        document.addEventListener('DOMContentLoaded', updateCarousel);
+
+        // Abo Contact Modal
+        function contactForAbo(aboType) {
+            document.getElementById('selectedAbo').textContent = aboType;
+            document.getElementById('aboModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('aboModal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal on outside click
+        document.getElementById('aboModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+
+        // Close modal on Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+
+        // Form submission with AJAX
+        document.getElementById('contact-form').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const form = e.target;
+            const submitButton = document.getElementById('submit-button');
+            const successMessage = document.getElementById('form-success');
+            const loadingIndicator = document.getElementById('form-loading');
+            const errorMessage = document.getElementById('form-error');
+            
+            // Hide previous messages
+            successMessage.classList.remove('show');
+            errorMessage.classList.add('hidden');
+            
+            // Show loading indicator
+            loadingIndicator.classList.remove('hidden');
+            submitButton.disabled = true;
+            
+            try {
+                // Prepare form data
+                const formData = new FormData(form);
+                
+                // Send form data to Formspree
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    // Show success message
+                    loadingIndicator.classList.add('hidden');
+                    successMessage.classList.add('show');
+                    form.reset();
+                    
+                    // Scroll to success message
+                    successMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                    
+                    // Reset button after 3 seconds
+                    setTimeout(() => {
+                        submitButton.disabled = false;
+                    }, 3000);
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            } catch (error) {
+                // Show error message
+                loadingIndicator.classList.add('hidden');
+                errorMessage.classList.remove('hidden');
+                submitButton.disabled = false;
+                
+                console.error('Form submission error:', error);
+            }
+        });
+
+        // Form field validation on blur
+        document.querySelectorAll('#contact-form input, #contact-form textarea, #contact-form select').forEach(field => {
+            field.addEventListener('blur', function() {
+                if (this.hasAttribute('required') && !this.value.trim()) {
+                    this.classList.add('border-red-500');
+                } else {
+                    this.classList.remove('border-red-500');
+                }
+            });
+        });
+
+        // Pre-select abo type when clicking from packages
+        document.querySelectorAll('button[onclick^="contactForAbo"]').forEach(button => {
+            button.addEventListener('click', function() {
+                const aboType = this.getAttribute('onclick').match(/\('([^']+)'\)/)[1];
+                const selectField = document.querySelector('select[name="abo-type"]');
+                const option = Array.from(selectField.options).find(opt => opt.value === aboType);
+                if (option) {
+                    selectField.value = aboType;
+                }
+                
+                // Scroll to contact form
+                document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // Update current year in footer
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+            
+            // Initialize accordion navigation
+            const servicesAdvantagesLinks = document.querySelectorAll('a[href="#services-advantages-section"]');
+            servicesAdvantagesLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const section = document.getElementById('services-advantages-section');
+                    if (section) {
+                        window.scrollTo({
+                            top: section.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
